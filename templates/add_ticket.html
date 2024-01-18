@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+Инфо о билете
+{% endblock %}
+
+{% block title %}
+Продать билет
+{% endblock %}
+
+{% block body %}
+    <h3>Все поля обязательны к заполнению!</h3>
+    <form method="post">
+        <input type="text" name="event-name" id="event-name" class="form-control" placeholder="Название мероприятия"><br>
+        <input type="datetime-local" name="event-datetime" id="event-datetime" class="form-control" placeholder="Дата и время мероприятия"><br>
+        <input type="text" name="event-city" id="event-city" class="form-control" placeholder="Город мероприятия"><br>
+        <input type="text" name="event-type" id="event-type" class="form-control" placeholder="Тип мероприятия"><br>
+        <input type="text" name="price" id="price" class="form-control" placeholder="Цена (RUB)"><br>
+        <input type="text" name="barcode" id="barcode" class="form-control" placeholder="Штрих-код билета (будет доступен только после оплаты)"><br>
+        <input type="submit" class="btn btn-success" value="Submit">
+    </form>
+{% endblock %}
